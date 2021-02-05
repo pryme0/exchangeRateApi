@@ -1,10 +1,15 @@
-## exchangeRateApi
+# exchangeRateApi
 
-# Api for getting latest exchange rates 
+ ##Api for getting latest exchange rates 
 
-# clone the repository 
+ How to Run the application
 
-# Run npm install to install dependencies
+ **clone the repository **  
+
+
+#### Run **npm install** to install dependencies
+
+#### Run **npm start** to start nodejs server;
 
 > you can get the latest exchange rates for a base currency by sending a get request to the applications api/rates endpoint.
 
@@ -16,28 +21,29 @@
 
 >> api/rates?base=USD&currency=INR&currency=CAD&currency=ISK&currency=PHP&currency=AUD
 
->example response for single currency
+>example response for single currency  
 
->{
-    "base": "USD",
-    "date": "2021-01-28",
-    "rates": {
-        "INR": 73.0468943843
-    }
-}
 
-> example response for multiple currency
+>{  
+    "base": "USD",  
+    "date": "2021-01-28",  
+    "rates": {  
+        "INR": 73.0468943843  
+    }  
+}  
 
->{
-    "base": "USD",
-    "date": "2021-01-28",
-    "rates": {
-        "THB": 30.0347365809,
-        "NZD": 1.4066661153,
-        "PLN": 3.7607311223,
-        "INR": 73.0468943843
-    }
-}
+> example response for multiple currency  
+
+>{  
+    "base": "USD",  
+    "date": "2021-01-28",  
+    "rates": {  
+        "THB": 30.0347365809,  
+        "NZD": 1.4066661153,  
+        "PLN": 3.7607311223,  
+        "INR": 73.0468943843  
+    }  
+}  
 
 
 
