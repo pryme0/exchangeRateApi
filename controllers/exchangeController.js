@@ -13,7 +13,7 @@ exports.getRates = async (req, res) => {
   try {
     const base = req.query.base;
     const currency = req.query.currency;
-  if(!base || !currency }) {
+  if(!base || !currency ) {
 	  return res.status(400).json({error:'please provide base and currency'})
 	  };
     let getExchanges = await request.get(
@@ -48,4 +48,17 @@ exports.getRates = async (req, res) => {
     }
   }
 };
+
+
+
+
+  function shuffleArray(array) {
+                for (var i = array.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    var temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+                return array;
+            }
 
