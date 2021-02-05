@@ -45,7 +45,7 @@
     }  
 }  
 
->Route to api <https://https://curencyrateapi.herokuapp.com/api/rates?base=USD&currency=INR&currency=CAD&currency=ISK&currency=PHP&currency=AUD>
+>Route to api <https://curencyrateapi.herokuapp.com/api/rates?base=USD&currency=INR&currency=CAD&currency=ISK&currency=PHP&currency=AUD>
 
 
 
