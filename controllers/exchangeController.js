@@ -13,6 +13,7 @@ exports.getRates = async (req, res) => {
   try {
     const base = req.query.base;
     const currency = req.query.currency;
+  if(!base || !currency }) throw({error:'Invalid base or currency',message:'please provide currency and base'});
     let getExchanges = await request.get(
       `https://api.exchangeratesapi.io/latest?base=${base}`
     );
@@ -37,7 +38,7 @@ exports.getRates = async (req, res) => {
     return res.status(200).json(results);
   } catch (err) {
     if (err.message) {
-      return res.status(err.status || 400).json(err.message);
+      return res.status(err.status || 400).json({error:err,message:err.message});
     } else {
       return res
         .status(err.status || 400)
@@ -45,19 +46,4 @@ exports.getRates = async (req, res) => {
     }
   }
 };
-exports.baserates = async (req, res) => {
-  try {
-    let getExchanges = await request.get(
-      `https://api.exchangeratesapi.io/latest?base=${base}`
-    );
-      return res.status(200).json(getExchanges);
-  } catch (err) {
-    if (err.message) {
-      return res.status(err.status || 400).json(err.message);
-    } else {
-      return res
-        .status(err.status || 400)
-        .json({ error: err, message: "unable to get latest rates" });
-    }
-  }
-};
+
