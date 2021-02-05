@@ -13,10 +13,12 @@ exports.getRates = async (req, res) => {
   try {
     const base = req.query.base;
     const currency = req.query.currency;
-  if(!base || !currency ) {
-	  return res.status(400).json({error:'please provide base and currency'})
-	  };
-    let getExchanges = await request.get(
+    if (!base || !currency) {
+      return res
+        .status(400)
+        .json({ error: "please provide base and currency" });
+    }
+    const getExchanges = await request.get(
       `https://api.exchangeratesapi.io/latest?base=${base}`
     );
     let results = {};
@@ -40,7 +42,9 @@ exports.getRates = async (req, res) => {
     return res.status(200).json(results);
   } catch (err) {
     if (err.message) {
-      return res.status(err.status || 400).json({error:err,message:err.message});
+      return res
+        .status(err.status || 400)
+        .json({ error: err, message: err.message });
     } else {
       return res
         .status(err.status || 400)
@@ -48,17 +52,3 @@ exports.getRates = async (req, res) => {
     }
   }
 };
-
-
-
-
-  function shuffleArray(array) {
-                for (var i = array.length - 1; i > 0; i--) {
-                    var j = Math.floor(Math.random() * (i + 1));
-                    var temp = array[i];
-                    array[i] = array[j];
-                    array[j] = temp;
-                }
-                return array;
-            }
-
