@@ -44,8 +44,8 @@
         "INR": 73.0468943843  
     }  
 }  
-
->Route to api <https://curencyrateapi.herokuapp.com/api/rates?base=USD&currency=INR&currency=CAD&currency=ISK&currency=PHP&currency=AUD>
+>Base Route <https://curencyrateapi.herokuapp.com/api>
+>Rates Route <https://curencyrateapi.herokuapp.com/api/rates?base=USD&currency=INR&currency=CAD&currency=ISK&currency=PHP&currency=AUD>
 
 
 
