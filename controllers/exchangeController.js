@@ -13,7 +13,7 @@ exports.getRates = async (req, res) => {
   try {
     const base = req.query.base;
     const currency = req.query.currency;
-  if(!base || !currency }) throw({error:'Invalid base or currency',message:'please provide currency and base'});
+  if(!base || !currency }) throw{error:'Invalid base or currency',message:'please provide currency and base'};
     let getExchanges = await request.get(
       `https://api.exchangeratesapi.io/latest?base=${base}`
     );
