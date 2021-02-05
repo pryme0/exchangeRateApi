@@ -1,10 +1,10 @@
 # exchangeRateApi
 
- ##Api for getting latest exchange rates 
+ ## Api for getting latest exchange rates 
 
  How to Run the application
 
- **clone the repository **  
+ ** clone the repository **  
 
 
 #### Run **npm install** to install dependencies
@@ -44,6 +44,8 @@
         "INR": 73.0468943843  
     }  
 }  
+
+>Route to api <https://https://curencyrateapi.herokuapp.com/api/rates?base=USD&currency=INR&currency=CAD&currency=ISK&currency=PHP&currency=AUD>
 
 
 
